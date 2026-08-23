@@ -105,7 +105,7 @@ export default function WorkPage() {
         eyebrow="Your project could be next"
         title="Tell us what you're building."
         blurb="We'll come back with a clear, fixed-scope quote — no pressure, no obligation."
-        image="https://images.pexels.com/photos/7413910/pexels-photo-7413910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1600"
+        image="https://images.pexels.com/photos/1714202/pexels-photo-1714202.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1600"
       >
         <StartProjectButton />
       </CTABand>
