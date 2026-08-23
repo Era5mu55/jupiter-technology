@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #0A1330;
+  --midnight: #152150;
+  --electric: #2E6FF2;
+  --cyan: #4FA3F7;
+  --off-white: #F7F8FB;
+  --white: #ffffff;
+  --slate: #3C4257;
+  --slate-soft: #6b7186;
+  --line: #E4E7F0;
+
+  --background: var(--off-white);
+  --foreground: var(--slate);
+
+  --font-heading: var(--font-sora);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 @theme inline {
+  --color-navy: var(--navy);
+  --color-midnight: var(--midnight);
+  --color-electric: var(--electric);
+  --color-cyan: var(--cyan);
+  --color-off-white: var(--off-white);
+  --color-slate: var(--slate);
+  --color-slate-soft: var(--slate-soft);
+  --color-line: var(--line);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.orbit-divider {
+  height: 2px;
+  width: 48px;
+  margin: 28px 0;
+  background: linear-gradient(90deg, var(--electric), var(--cyan));
+  border-radius: 999px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--electric);
+  font-weight: 500;
+}
+
+.eyebrow.on-dark {
+  color: var(--cyan);
 }
