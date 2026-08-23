@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jupitertechnology.tech";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.jupitertechnology.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

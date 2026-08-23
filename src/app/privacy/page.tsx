@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Jupiter Technology collects, uses, and protects your information when you visit jupitertechnology.tech or work with us.",
+    "How Jupiter Technology collects, uses, and protects your information when you visit www.jupitertechnology.tech or work with us.",
   alternates: { canonical: "/privacy" },
   robots: { index: true, follow: true },
 };
@@ -13,13 +13,13 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lead="How we collect, use, and protect your information when you visit jupitertechnology.tech or work with us."
+      lead="How we collect, use, and protect your information when you visit www.jupitertechnology.tech or work with us."
       image="https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1600"
       intro={
         <p>
           Jupiter Technology (&quot;we,&quot; &quot;us,&quot; &quot;our&quot;)
           respects your privacy. This policy explains what information we
-          collect through jupitertechnology.tech, how we use it, and the
+          collect through www.jupitertechnology.tech, how we use it, and the
           choices you have.
         </p>
       }

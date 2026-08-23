@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { CASE_STUDIES } from "@/data/work";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jupitertechnology.tech";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.jupitertechnology.tech";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

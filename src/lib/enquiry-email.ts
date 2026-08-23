@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://jupitertechnology.tech";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.jupitertechnology.tech";
 
 export type EnquiryData = {
   name: string;
@@ -60,7 +60,7 @@ export function buildEnquiryEmailHtml(data: EnquiryData) {
               </td>
             </tr>
           </table>
-          <p style="margin:20px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7186;">Sent from the enquiry form at jupitertechnology.tech</p>
+          <p style="margin:20px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6b7186;">Sent from the enquiry form at www.jupitertechnology.tech</p>
         </td>
       </tr>
     </table>

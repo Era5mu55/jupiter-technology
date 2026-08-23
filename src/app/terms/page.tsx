@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "The terms that govern your use of jupitertechnology.tech and any project you engage Jupiter Technology to build.",
+    "The terms that govern your use of www.jupitertechnology.tech and any project you engage Jupiter Technology to build.",
   alternates: { canonical: "/terms" },
   robots: { index: true, follow: true },
 };
@@ -13,11 +13,11 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms of Service"
-      lead="The terms that govern your use of jupitertechnology.tech and any project you engage us to build."
+      lead="The terms that govern your use of www.jupitertechnology.tech and any project you engage us to build."
       image="https://images.pexels.com/photos/261621/pexels-photo-261621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=1600"
       intro={
         <p>
-          These terms govern your use of jupitertechnology.tech. By using
+          These terms govern your use of www.jupitertechnology.tech. By using
           this site or engaging Jupiter Technology for services, you agree
           to the terms below.
         </p>
