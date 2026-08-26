@@ -241,17 +241,20 @@ export default function EnquiryModal() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-[6.5rem] right-6 z-40 flex items-center gap-3"
+        className="group fixed bottom-[6.5rem] right-6 z-40 flex items-center gap-3 [transform:translateZ(0)]"
       >
-        <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy shadow-lg">
+        <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
           WhatsApp
         </span>
         <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:bg-[#1ebd5a]">
           <MessageCircle className="h-6 w-6" />
         </span>
       </a>
-      <button onClick={open} className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
-        <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy shadow-lg">
+      <button
+        onClick={open}
+        className="group fixed bottom-6 right-6 z-40 flex items-center gap-3 [transform:translateZ(0)]"
+      >
+        <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
           Start a project
         </span>
         <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-electric text-white shadow-lg hover:bg-[#2359c9]">

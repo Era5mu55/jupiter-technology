@@ -3,6 +3,7 @@ export const SITE = {
   email: "info@jupitertechnology.tech",
   whatsappNumber: "19179620098",
   whatsappMessage: "Hi Jupiter Technology, I'd like to discuss a project",
+  facebookUrl: "https://www.facebook.com/jupiter.technology.us",
   address: {
     line1: "839 4th St, Apt 2",
     line2: "Bowling Green, OH 43402",

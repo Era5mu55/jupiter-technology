@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Wrap } from "./ui";
 import { SITE } from "@/data/site";
+import { FacebookIcon } from "./icons";
 
 export default function SiteFooter() {
   return (
@@ -53,6 +54,16 @@ export default function SiteFooter() {
             <br />
             {SITE.address.line2}
           </address>
+          <a
+            href={SITE.facebookUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Jupiter Technology on Facebook"
+            className="mt-4 inline-flex items-center gap-2 text-sm hover:text-white"
+          >
+            <FacebookIcon className="h-4 w-4" />
+            Facebook
+          </a>
         </div>
         <div className="md:pl-10">
           <h4 className="text-sm font-semibold text-white">Legal</h4>
