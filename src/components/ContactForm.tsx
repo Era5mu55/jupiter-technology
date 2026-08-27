@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PrimaryButton } from "./Button";
+import { fireSignUpConversion } from "@/lib/gtag";
 
 const PROJECT_TYPES = [
   "Website",
@@ -29,6 +30,7 @@ export default function ContactForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
+      fireSignUpConversion();
       setStatus("sent");
     } catch {
       setStatus("error");

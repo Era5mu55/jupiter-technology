@@ -127,6 +127,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             gtag('config', 'AW-18412006877');
           `}
         </Script>
+        {/* Google tag (gtag.js) event - delayed navigation helper */}
+        <Script id="gtag-send-event" strategy="afterInteractive">
+          {`
+            function gtagSendEvent(url) {
+              var callback = function () {
+                if (typeof url === 'string') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'ads_conversion_Sign_Up_1', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+              });
+              return false;
+            }
+          `}
+        </Script>
       </head>
       <body className="min-h-full flex flex-col bg-off-white text-slate">
         <EnquiryProvider>

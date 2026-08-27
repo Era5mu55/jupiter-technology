@@ -5,6 +5,7 @@ import { MessageCircle, Mail, User, Phone, Briefcase, DollarSign, Calendar, X } 
 import { useEnquiry } from "./EnquiryProvider";
 import { whatsappHref } from "@/data/site";
 import { GhostButton, PrimaryButton } from "./Button";
+import { fireSignUpConversion } from "@/lib/gtag";
 
 const PROJECT_TYPES = [
   "Website",
@@ -71,6 +72,7 @@ export default function EnquiryModal() {
   }
 
   function sendViaWhatsapp() {
+    fireSignUpConversion();
     window.open(whatsappHref(buildWhatsappSummary(form)), "_blank", "noreferrer");
     handleClose();
   }
@@ -84,6 +86,7 @@ export default function EnquiryModal() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
+      fireSignUpConversion();
       handleClose();
     } catch {
       setEmailStatus("error");
@@ -241,6 +244,7 @@ export default function EnquiryModal() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"
+        onClick={() => fireSignUpConversion()}
         className="group fixed bottom-[6.5rem] right-6 z-40 flex items-center gap-3 [transform:translateZ(0)]"
       >
         <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
@@ -251,7 +255,10 @@ export default function EnquiryModal() {
         </span>
       </a>
       <button
-        onClick={open}
+        onClick={() => {
+          fireSignUpConversion();
+          open();
+        }}
         className="group fixed bottom-6 right-6 z-40 flex items-center gap-3 [transform:translateZ(0)]"
       >
         <span className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-navy opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100">
